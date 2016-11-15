@@ -13,7 +13,6 @@ Cipher.prototype.setKeys = function(keyset) {
 Cipher.prototype.encrypt = function(text) {
 	var keyVal = this.keyVal;
 	var keys = this.keys;
-	console.log("to encrypt: ", text);
 
 	var addKey = function(char) {
 		var charVal = keys.indexOf(char);
@@ -41,7 +40,6 @@ Cipher.prototype.decrypt = function(text) {
 	var keys = this.keys;
 	var keyVal = this.keyVal;
 	var decryptedText = [];
-	console.log("to decrypt: ", text);
 
 	var substractKey = function(char) {
 		var charVal = keys.indexOf(char);
