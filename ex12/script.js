@@ -1,4 +1,4 @@
 var encoder = new Cipher('c');
 
-console.log( "to encrypt: abcdefgh; result: ", encoder.encrypt('abcdefgh') );
-console.log( "to decrypt: abcdefgh; result: ", encoder.decrypt('abcdefgh') );
+console.log( "to encrypt: abcxyz; result: ", encoder.encrypt('abcxyz') );
+console.log( "to decrypt: cdezab; result: ", encoder.decrypt('cdezab') );

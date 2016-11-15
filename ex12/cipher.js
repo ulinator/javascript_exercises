@@ -37,17 +37,15 @@ Cipher.prototype.encrypt = function(text) {
 
 /* input your string to be decrypted */
 Cipher.prototype.decrypt = function(text) {
-	var keys = this.keys;
 	var keyVal = this.keyVal;
-	var decryptedText = [];
+	var keys = this.keys;
 
 	var substractKey = function(char) {
 		var charVal = keys.indexOf(char);
 		var dif = charVal - keyVal;
-		// var newChar = keys[dif >= 0 ? dif : dif - keys.length];
-		// return newChar;
+		var newChar = keys[dif >= 0 ? dif : keys.length + dif];
+		return newChar;
 
-		return keys[dif % keys.length];
 	}
 
 	return text.split("").map(substractKey).join("");
